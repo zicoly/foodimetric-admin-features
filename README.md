@@ -1,54 +1,104 @@
-# React + TypeScript + Vite
+# 🍽️ Admin Dashboard - Meal Distribution & User Management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An elegant and responsive admin dashboard built with **React** and **Tailwind CSS**, designed to monitor and manage users, credits, and analytics for a meal distribution platform.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### 📊 Dashboard Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Analytics Cards** showing key stats:
+  - Total Users
+  - Active Today
+  - Total Meals
+  - Top Meal of the Day
+- **Interactive Charts**:
+  - User signups by month
+  - Meal distribution by type (Breakfast, Lunch, Dinner)
+- **Skeleton loader** shown while dashboard data is loading
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 👥 User Table
+
+- Displays **50 users** with the following data:
+  - Full name
+  - Email address
+  - Credit (max 1000)
+  - Status: Active / Inactive
+  - Account creation date
+  - Last login date
+- **Search**: Filter users by name or email
+- **Pagination**: 10 users per page, with next/prev navigation
+- **No match handling**: Displays a message when no users match the search query
+
+### 📱 Responsive Sidebar
+
+- **Desktop Sidebar**: Fixed on the left
+- **Mobile Sidebar**: Toggles with overlay using a hamburger menu
+- **Sticky Topbar**: Appears on mobile with navigation control
+
+---
+
+## 🧑‍💻 Tech Stack
+
+- **React**
+- **Tailwind CSS**
+- **TypeScript**
+- **Heroicons / Lucide React**
+- **Mock Data** (static list of 50 dummy users)
+
+---
+
+## 📁 Project Structure (Key Files)
+
+src/
+├── components/
+│ ├── Dashboard/
+│ │ ├── AnalyticsCards.tsx
+│ │ └── UserCharts.tsx
+│ └── Meals/
+│ └── MealTable.tsx
+├── pages/
+│ ├── Dashboard.tsx
+│ └── Meals.tsx
+├── types/
+│ └── index.ts
+├── App.tsx
+├── main.tsx
+└── index.css
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/zicoly/foodimetric-admin-features.git
+cd meal-dashboard
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧪 Dummy Data Source
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### All user data is located in
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+/src/types/dummyUsers.ts
+
+#### This file contains 50 realistic dummy users with randomly assigned
+
+- **Credits (0 - 1000)**
+- **Statuses (Active / Inactive)**
+- **Creation and last login dates**
+
+## 👤 Author
+
+Omojola Zion Olalekan
+
+## 📄 License
+
+MIT © 2025 Omojola Zion
