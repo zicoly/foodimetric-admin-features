@@ -51,7 +51,7 @@ const UserCharts: React.FC<Props> = ({ signups, distribution }) => {
               fill="#8884d8"
               label
             >
-              {distribution.map((entry, index) => (
+              {distribution.map((_entry, index) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
