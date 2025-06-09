@@ -1,11 +1,9 @@
 import type { ReactNode } from "react";
 import { useState } from "react";
 import {
-  BarChart3,
   LayoutDashboard,
   Menu,
   UtensilsCrossed,
-  X,
   LogOut,
 } from "lucide-react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
