@@ -13,16 +13,19 @@ const Login = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setError("");
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       if (email === "admin@foodimetric.com" && password === "admin123") {
         localStorage.setItem("isAuthenticated", "true");
-        navigate("/");
+        navigate("/dashboard");
       } else {
         setError("Invalid credentials");
       }
+    } catch {
+      setError("Something went wrong. Try again.");
     } finally {
       setIsLoading(false);
     }
