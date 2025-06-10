@@ -10,7 +10,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 
 const links = [
-  { name: "Dashboard", path: "/", icon: LayoutDashboard },
+  { name: "Dashboard", path: "/dashboard", icon: LayoutDashboard },
   { name: "Meals", path: "/meals", icon: UtensilsCrossed },
 ];
 
@@ -93,7 +93,7 @@ const SidebarLayout = ({ children }: Props) => {
             <Menu size={24} />
           </button>
           <h2 className="text-lg font-semibold text-gray-700">Admin Panel</h2>
-          <div className="w-6 h-6" /> {/* Spacer to center title */}
+          <div className="w-6 h-6" />
         </div>
 
         {/* Main content */}

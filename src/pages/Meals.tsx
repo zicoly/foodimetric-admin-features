@@ -35,7 +35,7 @@ const Meals = () => {
   return (
     <div>
       <div className="flex flex-col lg:flex-row justify-between items-start mb-4 gap-4">
-        <h2 className="lg:text-2xl text-xl text-[#147e03] font-[cursive] font-bold whitespace-nowrap">
+        <h2 className="lg:text-2xl text-xl text-[#147e03] lg:font-[cursive] font-bold whitespace-nowrap">
           Meal Management
         </h2>
         <button

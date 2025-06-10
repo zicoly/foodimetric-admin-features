@@ -25,7 +25,7 @@ const UserTable = () => {
 
   return (
     <div className="mt-8 bg-white shadow-lg rounded-xl p-4">
-      <h3 className="text-lg font-[cursive] font-bold text-[#147e03] mb-4">
+      <h3 className="text-lg lg:font-[cursive] font-bold text-[#147e03] mb-4">
         User Accounts
       </h3>
       <input

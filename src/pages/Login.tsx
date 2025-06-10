@@ -47,7 +47,7 @@ const Login = () => {
         className="bg-white p-6 py-12 rounded-2xl shadow-md space-y-6 w-full max-w-md relative"
       >
         {isLoading && <Loader />}
-        <h2 className="text-2xl lg:text-3xl font-[cursive] font-bold text-[#FFBA08] text-center">
+        <h2 className="text-2xl lg:text-3xl lg:font-[cursive] font-bold text-[#FFBA08] text-center">
           Admin Login
         </h2>
         {error && <p className="text-sm text-red-600">{error}</p>}

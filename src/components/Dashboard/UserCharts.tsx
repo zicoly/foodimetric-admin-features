@@ -23,7 +23,7 @@ const UserCharts: React.FC<Props> = ({ signups, distribution }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
       <div className="bg-white p-4 shadow rounded-xl border border-gray-100">
-        <h3 className="text-lg font-[cursive] font-bold text-[#147e03] mb-2">
+        <h3 className="text-lg lg:font-[cursive] font-bold text-[#147e03] mb-2">
           Monthly Signups
         </h3>
         <ResponsiveContainer width="100%" height={250}>
@@ -36,7 +36,7 @@ const UserCharts: React.FC<Props> = ({ signups, distribution }) => {
         </ResponsiveContainer>
       </div>
       <div className="bg-white p-4 shadow rounded-xl border border-gray-100">
-        <h3 className="text-lg font-[cursive] font-bold text-[#147e03] mb-2">
+        <h3 className="text-lg lg:font-[cursive] font-bold text-[#147e03] mb-2">
           Meal Type Distribution
         </h3>
         <ResponsiveContainer width="100%" height={250}>

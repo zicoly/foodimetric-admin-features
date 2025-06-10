@@ -34,7 +34,7 @@ const Dashboard = () => {
 
   return (
     <div>
-      <h2 className="text-2xl font-[cursive] text-[#147e03] font-bold mb-4">
+      <h2 className="text-2xl lg:font-[cursive] text-[#147e03] font-bold mb-4">
         Dashboard Overview
       </h2>
       {loading ? (
